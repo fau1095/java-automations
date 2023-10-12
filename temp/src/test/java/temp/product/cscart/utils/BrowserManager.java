@@ -1,15 +1,16 @@
 package temp.product.cscart.utils;
 
 
-import org.openqa.selenium.WebDriver.Options;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
+import org.testng.Reporter;
 
 public class BrowserManager {
     
-    public static WebDriver getDriver(String type) {
+    public static WebDriver getDriver(String type, String url) {
         WebDriver driver=null;
         if(type.equalsIgnoreCase("chrome")){
              driver = new ChromeDriver();  
@@ -22,6 +23,8 @@ public class BrowserManager {
         
         driver.manage().timeouts();
         driver.manage().window().maximize();
+        driver.get(url);
+        Reporter.log("Navigated to Browser:"+type+"URL: " +url, true);
         return driver; 
         
     }

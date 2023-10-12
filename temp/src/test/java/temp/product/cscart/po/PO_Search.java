@@ -27,7 +27,7 @@ public class PO_Search {
     }
 
     public void ClickSearchButton(){
-        txtbx_search.click();
+        btn_search.click();
         Reporter.log("Search Box Button Clicked.",true);
     }
 

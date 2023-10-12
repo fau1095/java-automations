@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8">
+<suite parallel="false" name="Suite">
+    <test name ="Test">
+    <Parameter name="browser" value="chrome"/>
+    <Parameter name="url" value="https://demos.mv.cs-cart.com/bc506fb8185938ce"/>
+        <classes>
+            <class name="tc.TC_HealthCheck"/>
+        </classes>
+    </test>
+</suite>
